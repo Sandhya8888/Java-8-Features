@@ -1,12 +1,15 @@
-
 public class MyClassWithLambda implements WordCount {
+	public static void main(String args[]) {
+		String s="Hello google";
+		WordCount w=(String i)->{
+			String[] words = i.split("\\s+");
+		    return words.length;
+			};
+			System.out.println(w.count(s));
+			}
 	@Override
 	public int count(String str) {
-		String[] words = str.split("\\s+");
-	    return words.length;
-	}
-	public static void main(String args[]) {
-		WordCount w=new MyClassWithLambda();
-		System.out.println(w.count("Hello Google"));
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }
